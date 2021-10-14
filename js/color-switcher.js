@@ -24,7 +24,7 @@ function changeBackground(color) {
 let intervalColorChange = undefined;
 function start() {
   intervalColorChange = setInterval(randomNumber => {
-    randomNumber = randomIntegerFromInterval(0, 5);
+    randomNumber = randomIntegerFromInterval(0, colors.length - 1);
     changeBackground(colors[randomNumber]);
   }, 1000);
   refs.stopButton.removeAttribute('disabled');
